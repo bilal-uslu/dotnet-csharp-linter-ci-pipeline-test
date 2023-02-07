@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v3      
 
       - name: Run dotnet format
-        run: dotnet format --verbosity d --severity error --report ./report.json
+        run: dotnet format --verbosity d --severity error --report ./report.json --verify-no-changes
 
       - uses: actions/upload-artifact@v3
         with:
