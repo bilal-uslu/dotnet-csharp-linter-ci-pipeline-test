@@ -21,7 +21,7 @@ jobs:
         run: dotnet tool install -g dotnet-format --version "7.*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet7/nuget/v3/index.json
 
       - name: Check out code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Run dotnet format
         run: dotnet format --verbosity diag --severity error --report ./report.json
