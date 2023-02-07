@@ -25,3 +25,8 @@ jobs:
 
       - name: Run dotnet format
         run: dotnet format --verbosity diag --severity error --report ./report.json
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: ./report.json        
