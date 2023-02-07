@@ -1,6 +1,6 @@
 ﻿namespace lintertest
 {
-  internal class aProgram
+  internal class Program
   {
 
 
