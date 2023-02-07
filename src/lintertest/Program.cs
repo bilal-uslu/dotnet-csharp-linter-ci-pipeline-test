@@ -1,6 +1,6 @@
 ﻿namespace lintertest
 {
-  internal class Program
+  internal class aProgram
   {
     static void Main(string[] args)
     {

@@ -7,12 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <EditorConfigFiles Remove="C:\Users\S01687\source\repos\lintertest\lintertest\.editorconfig" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="C:\Users\S01687\source\repos\lintertest\lintertest\.editorconfig" />
-  </ItemGroup>
-
 </Project>
