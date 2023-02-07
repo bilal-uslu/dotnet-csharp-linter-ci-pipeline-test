@@ -2,25 +2,26 @@ name: dotnet format
 
 on:
   push:
-    paths:
-      - "**.cs"
-      - ".editorconfig"
+    branches: [master, main]
+    # Remove the line above to run when pushing to master
+  pull_request:
+    branches: [master, main]
 
 jobs:
   check-format:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '5.0.x'
+          dotnet-version: 6.0.x
 
       - name: Install dotnet-format tool
-        run: dotnet tool install -g dotnet-format
+        run: dotnet tool install -g dotnet-format --version "7.*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet7/nuget/v3/index.json
 
       - name: Check out code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Run dotnet format
-        run: dotnet format '.\' --folder --check --verbosity diagnostic --severity error --report ./report.json
+        run: dotnet format --verbosity diag --severity error --report ./report.json
