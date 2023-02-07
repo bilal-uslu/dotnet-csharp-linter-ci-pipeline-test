@@ -31,10 +31,11 @@ jobs:
     - name: Lint Code Base
       uses: github/super-linter@v4
       env:
-        VALIDATE_ALL_CODEBASE: false
+        VALIDATE_ALL_CODEBASE: true
         DEFAULT_BRANCH: main
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}      
         EDITORCONFIG_FILE_NAME: .editorconfig
         CREATE_LOG_FILE: true
+        VALIDATE_CSHARP: true
     - name: Test
       run: dotnet test --no-build --verbosity normal
