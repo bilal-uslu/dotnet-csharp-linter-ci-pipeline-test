@@ -1,18 +1,7 @@
 ﻿namespace lintertest
 {
-  internal class aProgram
+  internal class Program
   {
-
-
-
-
-
-
-
-
-
-
-
     static void Main(string[] args)
     {
       Console.WriteLine("Hello, World! " + args.Length);
