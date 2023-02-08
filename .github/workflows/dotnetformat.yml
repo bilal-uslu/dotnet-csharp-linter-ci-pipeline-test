@@ -30,5 +30,3 @@ jobs:
         with:
           name: my-artifact
           path: ./report.json        
-          
-        
